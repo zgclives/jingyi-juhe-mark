@@ -1,0 +1,31 @@
+{
+  "name": "zgclives/jingyi-juhe-mark",
+  "description": "精易科技营销模块",
+  "keywords": [
+    "jingyi",
+    "ijingyi",
+    "juhe",
+    "mark"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "zgclives",
+      "email": "83746020@qq.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "JuheMark\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=7.0",
+    "guzzlehttp/guzzle": "^6.2 || ^7.0",
+    "pimple/pimple": "^3.0"
+  },
+  "packagist": {
+    "type": "composer",
+    "url": "https://packagist.phpcomposer.com"
+  }
+}
