@@ -134,7 +134,7 @@ class Application extends RequestContainer
     /**
      * 分销订单佣金取消
      * @param int    $user_id 用户ID
-     * @param int    $amount  操作金额
+     * @param int    $amount  操作金额（单位：厘）
      * @param string $kind    操作方式：INC=增加,DEC=扣减
      * @param string $remark  操作说明
      * @return string
