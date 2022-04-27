@@ -1,6 +1,7 @@
 {
   "name": "zgclives/jingyi-juhe-mark",
   "description": "精易科技营销模块",
+  "type": "library",
   "keywords": [
     "jingyi",
     "ijingyi",
