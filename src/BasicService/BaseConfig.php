@@ -4,7 +4,7 @@ namespace JuheMark\BasicService;
 
 use JuheMark\Kernel\Env;
 
-$envFile = dirname(__DIR__, 2) . '/.env.juhe.mark';
+$envFile = dirname(__DIR__, 5) . '/.env.juhe.mark';
 
 if (!file_exists($envFile)) {
     copy(dirname(__DIR__, 1) . '/env.juhe.mark.example', $envFile);
