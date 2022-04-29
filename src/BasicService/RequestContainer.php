@@ -126,6 +126,7 @@ class RequestContainer
         // 固定的header信息
         return [
             'client-key' => $this->config['client_key'],
+            'config-key' => $this->config['config_key'] ?? 'default',
         ];
     }
 
@@ -163,7 +164,8 @@ class RequestContainer
     {
         // 固定的请求参数
         $params = [
-            // 'debug'     => $this->config['debug'],
+            // 'config_key' => $this->config['config_key'] ?? 'default',
+            'debug'     => $this->config['debug'],
             'app_key'   => $this->config['app_key'],
             'timestamp' => time(),
             'data'      => json_encode($data)

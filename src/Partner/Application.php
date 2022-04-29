@@ -23,6 +23,16 @@ class Application extends RequestContainer
     }
 
     /**
+     * 初始化分销配置
+     * @param string|int $config_key
+     * @return string
+     */
+    public function createConfig($config_key)
+    {
+        return $this->httpPost($this->serverMark . '/createConfig', ['config_key' => $config_key]);
+    }
+
+    /**
      * 获取分销配置
      * @return string
      */
@@ -46,7 +56,7 @@ class Application extends RequestContainer
     }
 
     /**
-     * 绑定用户信息
+     * 设置用户等级
      * @param array $user  用户信息['user_id', 'name']
      * @param int   $level 跳转等级
      * @return string
@@ -132,7 +142,7 @@ class Application extends RequestContainer
     }
 
     /**
-     * 分销订单佣金取消
+     * 操作分销用户佣金
      * @param int    $user_id 用户ID
      * @param int    $amount  操作金额（单位：厘）
      * @param string $kind    操作方式：INC=增加,DEC=扣减
