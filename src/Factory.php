@@ -6,6 +6,7 @@ namespace JuheMark;
  * Class Factory
  * @method static \JuheMark\Common\Application Common(array $config = [])
  * @method static \JuheMark\Partner\Application Partner(array $config = [])
+ * @method static \JuheMark\Invite\Application Invite(array $config = [])
  */
 class Factory
 {
