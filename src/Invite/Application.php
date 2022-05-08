@@ -154,7 +154,7 @@ class Application extends RequestContainer
     }
 
     /**
-     * 用户兑换记录
+     * 用户兑换记录列表
      * @param int   $user_id 兑换人ID
      * @param array $query   查询条件
      * @return string
@@ -163,6 +163,20 @@ class Application extends RequestContainer
     {
         $query['user_id'] = $user_id;
         return $this->httpPost($this->serverMark . '/userExchangeLogs', $query);
+    }
+
+    /**
+     * 用户兑换记录详情
+     * @param int $user_id 兑换人ID
+     * @param int $log_id  兑换记录ID
+     * @return string
+     */
+    public function userExchangeLogDetail(int $user_id, int $exchange_log_id)
+    {
+        return $this->httpPost($this->serverMark . '/userExchangeLogDetail', [
+            'user_id'         => $user_id,
+            'exchange_log_id' => $exchange_log_id,
+        ]);
     }
 
     /**
