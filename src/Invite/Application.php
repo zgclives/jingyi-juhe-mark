@@ -87,7 +87,7 @@ class Application extends RequestContainer
 
     /**
      * 订单完成
-     * @param array $user_id 用户ID
+     * @param int   $user_id 用户ID
      * @param array $order   订单信息['order_id', 'order_no', 'order_amount']
      * @return string
      */
@@ -121,6 +121,18 @@ class Application extends RequestContainer
     public function exchangeInfoList(array $query = [])
     {
         return $this->httpPost($this->serverMark . '/exchangeInfoList', $query);
+    }
+
+    /**
+     * 兑换信息详情
+     * @param int $third_exchange_id 兑换信息ID
+     * @return string
+     */
+    public function exchangeInfoDetail($third_exchange_id)
+    {
+        return $this->httpPost($this->serverMark . '/exchangeInfoDetail', [
+            'third_exchange_id' => $third_exchange_id
+        ]);
     }
 
     /**
