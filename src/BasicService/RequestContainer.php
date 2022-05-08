@@ -16,6 +16,15 @@ class RequestContainer
     }
 
     /**
+     * 获取配置文件内容
+     * @return array|mixed|null
+     */
+    public function getBaseConfig()
+    {
+        return $this->config;
+    }
+
+    /**
      * 聚合权限接口专用
      * @param array $data
      * @param array $query
