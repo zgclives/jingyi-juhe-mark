@@ -136,6 +136,7 @@ class RequestContainer
         return [
             'client-key' => $this->config['client_key'],
             'config-key' => $this->config['config_key'] ?? 'default',
+            'zone-id'    => $this->config['zone_id'] ?? '',
         ];
     }
 
