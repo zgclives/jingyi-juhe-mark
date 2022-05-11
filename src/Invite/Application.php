@@ -101,20 +101,6 @@ class Application extends RequestContainer
     }
 
     /**
-     * 拉新订单佣金取消
-     * @param int $user_id  用户ID
-     * @param int $order_id 订单ID
-     * @return string
-     */
-    // public function orderRefund(int $user_id, int $order_id)
-    // {
-    //     return $this->httpPost($this->serverMark . '/orderRefund', [
-    //         'user_id'  => $user_id,
-    //         'order_id' => $order_id,
-    //     ]);
-    // }
-
-    /**
      * 兑换信息列表
      * @param array $query 查询条件
      * @return string
