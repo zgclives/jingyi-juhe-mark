@@ -159,6 +159,30 @@ class Application extends RequestContainer
     }
 
     /**
+     * 分销商用户列表
+     * @param int   $user_id 用户ID
+     * @param array $query   查询条件
+     * @return string
+     */
+    public function withdrawLogs(int $user_id, array $query = [])
+    {
+        $query['user_id'] = $user_id;
+        return $this->httpPost($this->serverMark . '/withdrawLogs', $query);
+    }
+
+    /**
+     * 用户资金记录列表
+     * @param int   $user_id 用户ID
+     * @param array $query   查询条件
+     * @return string
+     */
+    public function userBalanceChangeList(int $user_id, array $query = [])
+    {
+        $query['user_id'] = $user_id;
+        return $this->httpPost($this->serverMark . '/userBalanceChangeList', $query);
+    }
+
+    /**
      * 操作分销用户佣金
      * @param int    $user_id 用户ID
      * @param int    $amount  操作金额（单位：厘）
