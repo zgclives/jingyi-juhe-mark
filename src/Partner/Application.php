@@ -142,6 +142,22 @@ class Application extends RequestContainer
     }
 
     /**
+     * 用户提现
+     * @param int    $user_id 用户ID
+     * @param int    $amount  操作金额（单位：厘）
+     * @param string $remark  操作说明
+     * @return string
+     */
+    public function withdraw(int $user_id, int $amount, string $remark)
+    {
+        return $this->httpPost($this->serverMark . '/withdraw', [
+            'user_id' => $user_id,
+            'amount'  => $amount,
+            'remark'  => $remark,
+        ]);
+    }
+
+    /**
      * 操作分销用户佣金
      * @param int    $user_id 用户ID
      * @param int    $amount  操作金额（单位：厘）
