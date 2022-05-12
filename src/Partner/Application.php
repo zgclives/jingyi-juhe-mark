@@ -25,11 +25,12 @@ class Application extends RequestContainer
     /**
      * 初始化分销配置
      * @param string|int $config_key
+     * @param int        $zone_id 区域ID
      * @return string
      */
-    public function createConfig($config_key)
+    public function createConfig($config_key, $zone_id = 0)
     {
-        return $this->httpPost($this->serverMark . '/createConfig', ['config_key' => $config_key]);
+        return $this->httpPost($this->serverMark . '/createConfig', ['config_key' => $config_key, 'zone_id' => $zone_id]);
     }
 
     /**
