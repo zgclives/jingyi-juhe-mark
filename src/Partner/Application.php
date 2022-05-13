@@ -101,6 +101,30 @@ class Application extends RequestContainer
     }
 
     /**
+     * 用户统计报表
+     * @param int   $user_id 用户ID
+     * @param array $query   查询条件
+     * @return string
+     */
+    public function userReport(int $user_id, array $query = [])
+    {
+        $query['user_id'] = $user_id;
+        return $this->httpPost($this->serverMark . '/userReport', $query);
+    }
+
+    /**
+     * 用户收益订单列表
+     * @param int   $user_id 用户ID
+     * @param array $query   查询条件
+     * @return string
+     */
+    public function incomeOrderList(int $user_id, array $query = [])
+    {
+        $query['user_id'] = $user_id;
+        return $this->httpPost($this->serverMark . '/incomeOrderList', $query);
+    }
+
+    /**
      * 订单支付，记录订单、佣金明细
      * @param array $user  用户信息['user_id', 'name']
      * @param array $order 订单信息['order_id', 'order_no', 'order_amount']
@@ -159,7 +183,7 @@ class Application extends RequestContainer
     }
 
     /**
-     * 分销商用户列表
+     * 用户提现记录
      * @param int   $user_id 用户ID
      * @param array $query   查询条件
      * @return string
@@ -199,5 +223,5 @@ class Application extends RequestContainer
             'remark'  => $remark,
         ]);
     }
-    
+
 }
