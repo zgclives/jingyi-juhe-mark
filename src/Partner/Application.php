@@ -44,8 +44,8 @@ class Application extends RequestContainer
 
     /**
      * 绑定用户信息
-     * @param array $user       用户信息['user_id', 'name']
-     * @param array $child_user 子级用户信息['user_id', 'name']
+     * @param array $user       用户信息['user_id', 'name', 'avatar']
+     * @param array $child_user 子级用户信息['user_id', 'name', 'avatar']
      * @return string
      */
     public function bindUser($user, $child_user)
@@ -126,7 +126,7 @@ class Application extends RequestContainer
 
     /**
      * 订单支付，记录订单、佣金明细
-     * @param array $user  用户信息['user_id', 'name']
+     * @param array $user  用户信息['user_id', 'name', 'avatar']
      * @param array $order 订单信息['order_id', 'order_no', 'order_amount']
      * @return string
      */
