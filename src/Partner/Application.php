@@ -82,12 +82,12 @@ class Application extends RequestContainer
 
     /**
      * 分销商用户详情
-     * @param int $user_id 用户ID
+     * @param array $user 用户信息['user_id', 'name', 'avatar']
      * @return string
      */
-    public function userDetail(int $user_id)
+    public function userDetail($user)
     {
-        return $this->httpPost($this->serverMark . '/userDetail', ['user_id' => $user_id]);
+        return $this->httpPost($this->serverMark . '/userDetail', ['user' => $user]);
     }
 
     /**
@@ -224,5 +224,5 @@ class Application extends RequestContainer
         ]);
     }
 
-    
+
 }
