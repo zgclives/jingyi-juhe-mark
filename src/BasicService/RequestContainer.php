@@ -168,7 +168,7 @@ class RequestContainer
      * 统一请求
      * @param string $action 接口名
      * @param array  $data   请求参数
-     * @return string
+     * @return string|array
      */
     protected function httpPost(string $action, array $data = [])
     {

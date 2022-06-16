@@ -12,10 +12,11 @@ composer require zgclives/jingyi-juhe-mark
 
 ## 功能(Features)
 
-| 营销模块 | 实现                 | 是否完成 |
-|------|--------------------| -------- |
-| 分销功能 | Factory::Partner() | ☑️       |
-| 拉新活动 | Factory::Invite()  | ☑️       |
+| 营销模块 | 实现                   | 是否完成 |
+|------|----------------------| -------- |
+| 分销功能 | Factory::Partner()   | ☑️       |
+| 拉新活动 | Factory::Invite()    | ☑️       |
+| 会员月卡 | Factory::MonthCard() | ☑️       |
 
 ## 使用(Usage)
 
