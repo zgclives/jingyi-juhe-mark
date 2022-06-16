@@ -7,7 +7,7 @@ use JuheMark\BasicService\RequestContainer;
 use JuheMark\Kernel\Response;
 
 /**
- * Class Application.
+ * 分销功能
  */
 class Application extends RequestContainer
 {

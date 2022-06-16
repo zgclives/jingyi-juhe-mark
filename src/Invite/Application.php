@@ -7,7 +7,7 @@ use JuheMark\BasicService\RequestContainer;
 use JuheMark\Kernel\Response;
 
 /**
- * Class Application.
+ * 拉新活动功能
  */
 class Application extends RequestContainer
 {
