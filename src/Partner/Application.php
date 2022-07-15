@@ -168,17 +168,21 @@ class Application extends RequestContainer
 
     /**
      * 用户提现
-     * @param int    $user_id 用户ID
-     * @param int    $amount  操作金额（单位：厘）
-     * @param string $remark  操作说明
+     * @param int    $user_id        用户ID
+     * @param int    $amount         操作金额（单位：厘）
+     * @param string $remark         操作说明
+     * @param string $alipay_account 支付宝账户
+     * @param string $real_name      真实姓名
      * @return string
      */
-    public function withdraw(int $user_id, int $amount, string $remark)
+    public function withdraw(int $user_id, int $amount, string $remark, string $alipay_account = '', string $real_name = '')
     {
         return $this->httpPost($this->serverMark . '/withdraw', [
-            'user_id' => $user_id,
-            'amount'  => $amount,
-            'remark'  => $remark,
+            'user_id'        => $user_id,
+            'amount'         => $amount,
+            'remark'         => $remark,
+            'alipay_account' => $alipay_account,
+            'real_name'      => $real_name,
         ]);
     }
 
