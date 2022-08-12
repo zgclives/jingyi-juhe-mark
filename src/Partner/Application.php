@@ -140,29 +140,33 @@ class Application extends RequestContainer
 
     /**
      * 分销订单佣金确认
-     * @param int $user_id  用户ID
-     * @param int $order_id 订单ID
+     * @param int    $user_id  用户ID
+     * @param int    $order_id 订单ID
+     * @param string $type     订单类型：RUN=跑腿单，ORDER=外卖单
      * @return string
      */
-    public function orderConfirm(int $user_id, int $order_id)
+    public function orderConfirm(int $user_id, int $order_id, string $type = 'ORDER')
     {
         return $this->httpPost($this->serverMark . '/orderConfirm', [
-            'user_id'  => $user_id,
-            'order_id' => $order_id,
+            'user_id'    => $user_id,
+            'order_id'   => $order_id,
+            'order_type' => $type,
         ]);
     }
 
     /**
      * 分销订单佣金取消
-     * @param int $user_id  用户ID
-     * @param int $order_id 订单ID
+     * @param int    $user_id  用户ID
+     * @param int    $order_id 订单ID
+     * @param string $type     订单类型：RUN=跑腿单，ORDER=外卖单
      * @return string
      */
-    public function orderRefund(int $user_id, int $order_id)
+    public function orderRefund(int $user_id, int $order_id, string $type = 'ORDER')
     {
         return $this->httpPost($this->serverMark . '/orderRefund', [
-            'user_id'  => $user_id,
-            'order_id' => $order_id,
+            'user_id'    => $user_id,
+            'order_id'   => $order_id,
+            'order_type' => $type,
         ]);
     }
 
@@ -227,6 +231,6 @@ class Application extends RequestContainer
             'remark'  => $remark,
         ]);
     }
-    
+
 
 }
