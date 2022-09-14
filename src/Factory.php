@@ -9,6 +9,7 @@ namespace JuheMark;
  * @method static \JuheMark\Invite\Application Invite(array $config = [])
  * @method static \JuheMark\MonthCard\Application MonthCard(array $config = [])
  * @method static \JuheMark\ExchangeStore\Application ExchangeStore(array $config = [])
+ * @method static \JuheMark\SignIn\Application SignIn(array $config = [])
  */
 class Factory
 {
