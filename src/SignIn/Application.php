@@ -26,9 +26,9 @@ class Application extends RequestContainer
      * 获取配置
      * @return string
      */
-    public function getConfig()
+    public function getConfig($user_id = 0)
     {
-        return $this->httpPost($this->serverMark . '/getConfig');
+        return $this->httpPost($this->serverMark . '/getConfig', ['user_id' => $user_id]);
     }
 
     /**
