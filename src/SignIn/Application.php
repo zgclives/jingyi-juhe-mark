@@ -88,5 +88,4 @@ class Application extends RequestContainer
         $query['user_id'] = $user_id;
         return $this->httpPost($this->serverMark . '/continuityRewardLogs', $query);
     }
-    
 }
