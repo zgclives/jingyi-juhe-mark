@@ -33,12 +33,12 @@ class Application extends RequestContainer
 
     /**
      * 用户详情（拉新）
-     * @param int $user_id 用户ID
+     * @param array $user 用户信息['user_id', 'name', 'avatar]
      * @return string
      */
-    public function userDetail(int $user_id)
+    public function userDetail($user)
     {
-        return $this->httpPost($this->serverMark . '/userDetail', ['user_id' => $user_id]);
+        return $this->httpPost($this->serverMark . '/userDetail', ['user_id' => $user['user_id'], 'user' => $user]);
     }
 
     /**
@@ -88,4 +88,5 @@ class Application extends RequestContainer
         $query['user_id'] = $user_id;
         return $this->httpPost($this->serverMark . '/continuityRewardLogs', $query);
     }
+
 }
