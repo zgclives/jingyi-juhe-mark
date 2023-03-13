@@ -172,15 +172,17 @@ class Application extends RequestContainer
      * @param int    $amount  操作金额（单位：厘）
      * @param string $kind    操作方式：INC=增加,DEC=扣减
      * @param string $remark  操作说明
+     * @param string $type    操作类型：TURNTABLE_WIN=转盘中奖奖励,TURNTABLE_DRAW=抽奖使用余额
      * @return string
      */
-    public function balanceOperate(int $user_id, int $amount, string $kind, string $remark)
+    public function balanceOperate(int $user_id, int $amount, string $kind, string $remark, string $type = 'MANUAL')
     {
         return $this->httpPost($this->serverMark . '/balanceOperate', [
             'user_id' => $user_id,
             'amount'  => $amount,
             'kind'    => $kind,
             'remark'  => $remark,
+            'type'    => $type,
         ]);
     }
 }
