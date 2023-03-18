@@ -185,5 +185,13 @@ class Application extends RequestContainer
             'type'    => $type,
         ]);
     }
-    
+
+    /**
+     * 用户余额变动记录
+     * @param array $params 查询参数
+     */
+    public function userBalanceChange($params)
+    {
+        return $this->httpPost($this->serverMark . '/userBalanceChange', $params);
+    }
 }
