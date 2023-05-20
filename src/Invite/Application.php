@@ -112,7 +112,7 @@ class Application extends RequestContainer
 
     /**
      * 兑换信息详情
-     * @param int $third_exchange_id 兑换信息ID
+     * @param string $third_exchange_id 兑换信息ID
      * @return string
      */
     public function exchangeInfoDetail($third_exchange_id)
@@ -125,12 +125,12 @@ class Application extends RequestContainer
     /**
      * 兑换
      * @param int    $user_id           兑换人ID
-     * @param int    $third_exchange_id 兑换信息ID
+     * @param string $third_exchange_id 兑换信息ID
      * @param int    $quantity          兑换数量
      * @param string $remark            说明
      * @return string
      */
-    public function exchange(int $user_id, int $third_exchange_id, int $quantity, string $remark = '')
+    public function exchange(int $user_id, string $third_exchange_id, int $quantity, string $remark = '')
     {
         return $this->httpPost($this->serverMark . '/exchange', [
             'user_id'           => $user_id,
@@ -194,6 +194,6 @@ class Application extends RequestContainer
     {
         return $this->httpPost($this->serverMark . '/userBalanceChange', $params);
     }
-    
+
 
 }
