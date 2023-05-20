@@ -140,6 +140,4 @@ class Application extends RequestContainer
             'task_info' => $task_info,
         ]);
     }
-
-
 }

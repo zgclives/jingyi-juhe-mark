@@ -194,6 +194,4 @@ class Application extends RequestContainer
     {
         return $this->httpPost($this->serverMark . '/userBalanceChange', $params);
     }
-
-
 }
