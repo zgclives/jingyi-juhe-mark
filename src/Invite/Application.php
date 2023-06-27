@@ -44,15 +44,17 @@ class Application extends RequestContainer
 
     /**
      * 绑定用户信息
-     * @param array $user       邀请人用户信息(父级) ['user_id', 'name']
-     * @param array $child_user 被邀请人用户信息（子级） ['user_id', 'name', 'position']
+     * @param array  $user       邀请人用户信息(父级) ['user_id', 'name']
+     * @param array  $child_user 被邀请人用户信息（子级） ['user_id', 'name', 'position']
+     * @param string $from       来源：register=注册，login=登录
      * @return string
      */
-    public function bindUser($user, $child_user)
+    public function bindUser($user, $child_user, $from = 'register')
     {
         return $this->httpPost($this->serverMark . '/bindUser', [
             'user'       => $user,
             'child_user' => $child_user,
+            'from'       => $from,
         ]);
     }
 
