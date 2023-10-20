@@ -46,6 +46,15 @@ class Application extends RequestContainer
     }
 
     /**
+     * 获取配置状态
+     * @return string
+     */
+    public function getConfigStatus()
+    {
+        return $this->httpPost($this->serverMark . '/getConfigStatus');
+    }
+
+    /**
      * 月卡用户详情
      * @param int $user_id 用户ID
      * @return string

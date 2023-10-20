@@ -43,6 +43,15 @@ class Application extends RequestContainer
     }
 
     /**
+     * 获取配置状态
+     * @return string
+     */
+    public function getConfigStatus()
+    {
+        return $this->httpPost($this->serverMark . '/getConfigStatus');
+    }
+
+    /**
      * 绑定用户信息
      * @param array  $user       邀请人用户信息(父级) ['user_id', 'name']
      * @param array  $child_user 被邀请人用户信息（子级） ['user_id', 'name', 'position']
