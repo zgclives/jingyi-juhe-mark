@@ -52,6 +52,15 @@ class Application extends RequestContainer
     }
 
     /**
+     * 获取所有营销配置状态
+     * @return string
+     */
+    public function getAllConfigStatus()
+    {
+        return $this->httpPost($this->serverMark . '/getAllConfigStatus');
+    }
+
+    /**
      * 绑定用户信息
      * @param array  $user       邀请人用户信息(父级) ['user_id', 'name']
      * @param array  $child_user 被邀请人用户信息（子级） ['user_id', 'name', 'position']
@@ -205,5 +214,5 @@ class Application extends RequestContainer
     {
         return $this->httpPost($this->serverMark . '/userBalanceChange', $params);
     }
-    
+
 }
