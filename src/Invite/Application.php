@@ -52,6 +52,15 @@ class Application extends RequestContainer
     }
 
     /**
+     * 获取配置规则
+     * @return string
+     */
+    public function getConfigRules()
+    {
+        return $this->httpPost($this->serverMark . '/getConfigRules');
+    }
+
+    /**
      * 获取所有营销配置状态
      * @return string
      */

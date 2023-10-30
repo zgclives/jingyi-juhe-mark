@@ -32,6 +32,15 @@ class Application extends RequestContainer
     }
 
     /**
+     * 获取配置规则
+     * @return string
+     */
+    public function getConfigRules()
+    {
+        return $this->httpPost($this->serverMark . '/getConfigRules');
+    }
+
+    /**
      * 用户详情（拉新）
      * @param array $user 用户对象
      * @return string

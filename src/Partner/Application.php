@@ -52,6 +52,15 @@ class Application extends RequestContainer
     }
 
     /**
+     * 获取配置规则
+     * @return string
+     */
+    public function getConfigRules()
+    {
+        return $this->httpPost($this->serverMark . '/getConfigRules');
+    }
+
+    /**
      * 绑定用户信息
      * @param array  $user       用户信息['user_id', 'name', 'avatar']
      * @param array  $child_user 子级用户信息['user_id', 'name', 'avatar']
