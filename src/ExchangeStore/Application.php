@@ -117,6 +117,20 @@ class Application extends RequestContainer
     }
 
     /**
+     * 确认收货（实物）
+     * @param int $user_id 兑换人ID
+     * @param int $log_id  兑换记录ID
+     * @return string
+     */
+    public function confirmGood(int $user_id, int $exchange_log_id)
+    {
+        return $this->httpPost($this->serverMark . '/confirmGood', [
+            'user_id'         => $user_id,
+            'exchange_log_id' => $exchange_log_id,
+        ]);
+    }
+
+    /**
      * 手动操作余额
      * @param int    $user_id 用户ID
      * @param int    $amount  操作金额（单位：厘）
