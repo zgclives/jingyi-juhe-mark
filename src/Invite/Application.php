@@ -66,7 +66,8 @@ class Application extends RequestContainer
      */
     public function getAllConfigStatus()
     {
-        return $this->httpPost($this->serverMark . '/getAllConfigStatus');
+        return $this->httpPost('mark/getAllConfigStatus');
+        // return $this->httpPost($this->serverMark . '/getAllConfigStatus');
     }
 
     /**
