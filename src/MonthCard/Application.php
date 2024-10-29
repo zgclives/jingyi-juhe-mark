@@ -93,4 +93,16 @@ class Application extends RequestContainer
             'order'   => $order,
         ]);
     }
+
+    /**
+     * 手动设置月卡用户
+     * @param int $user_id 用户ID
+     * @return array
+     */
+    public function manualSetUser($user_id)
+    {
+        return $this->httpPost($this->serverMark . '/manualSetUser', [
+            'user_id' => $user_id,
+        ]);
+    }
 }
