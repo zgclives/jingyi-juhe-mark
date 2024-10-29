@@ -105,4 +105,5 @@ class Application extends RequestContainer
             'user_id' => $user_id,
         ]);
     }
+
 }
